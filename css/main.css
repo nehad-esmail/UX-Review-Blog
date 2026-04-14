@@ -1,0 +1,1455 @@
+/*general styles*/
+*,
+*::before,
+*::after
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root
+{
+    --black: rgb(0, 0, 0);
+    --bg-black: rgb(0, 0, 0);
+    --bg-white: rgb(255, 255, 255);
+    --bg-hero: rgb(255, 240, 133);
+    --bg-authers: rgb(255, 210, 48);
+    --bg-section: rgb(245, 245, 245);
+    --red: rgb(231, 0, 11);
+    --red-light: rgb(251, 44, 54);
+    --blue: rgb(21, 93, 252);
+    --blue-light: rgb(43, 127, 255);
+    --purple: rgb(173, 70, 255);
+    --hover-purple: rgb(152, 16, 250);
+    --green: rgb(0, 201, 80);
+    --yellow: rgb(255, 223, 32);
+    --hover-yellow: rgb(253, 199, 0);
+    --hover-orange: rgb(255 122 80);
+    --text-black: rgb(0, 0, 0);
+    --text-muted-gray: rgb(82 82 82);
+    --text-white: rgb(255, 255, 255);
+    --brand-black: rgb(17,17,17);
+    --brand-orange: rgb(255 105 0);
+}
+html
+{
+    scroll-behavior: smooth;
+    scroll-padding-top: 52px;
+}
+body
+{
+    font-family: EXO, sans-serif;
+}
+button,
+input
+{
+    font: inherit;
+    border: none;
+    outline: none;
+}
+button
+{
+    cursor: pointer;
+    color: inherit;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ul
+{
+    list-style-type: none;
+}
+::selection
+{
+    background-color: rgb(255 209 91);
+    color: var(--text-black);
+}
+/* Shared Utilities*/
+/*Layout*/
+.flex
+{
+    display: flex;
+}
+.items-center
+{
+    align-items: center;
+}
+.center
+{
+    justify-content: center;
+    align-items: center;
+}
+.space-between
+{
+    justify-content: space-between;
+}
+.hidden
+{
+    display: none;
+}
+/*Spacing*/
+.mt-4 { margin-top: 4px; }
+.mt-16 { margin-top: 16px; }
+.mt-48 { margin-top: 48px; }
+
+.mb-8 { margin-bottom: 8px; }
+.mb-12 { margin-bottom: 12px; }
+.mb-16 { margin-bottom: 16px; }
+.mb-24 { margin-bottom: 24px; }
+.mb-28 { margin-bottom: 28px; }
+.mb-32 { margin-bottom: 32px; }
+.mb-48 { margin-bottom: 48px; }
+.mb-64 { margin-bottom: 64px; }
+
+.mr-16 { margin-right: 16px; }
+.mr-24 { margin-right: 24px; }
+.mr-32 { margin-right: 32px; }
+
+.pt-32 { padding-top: 32px; }
+/* width */
+.w-fit
+{
+    width: fit-content;
+}
+.margin-auto
+{
+    margin-inline: auto;
+}
+/* Text alignment*/
+.text-center
+{
+    text-align: center;
+}
+/* gaps*/
+.gap-16 { gap: 16px; }
+/* position*/
+.relative
+{
+    position: relative;
+}
+.isolate
+{
+    isolation: isolate;
+}
+/*Text and typography*/
+.text-21-500
+{
+    font-size: 21px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 28px;
+    color: var(--text-black);
+}
+.text-800-26
+{
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 800;
+    color: var(--brand-black);
+    line-height: 32px;
+}
+.text-26-800-orange
+{
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 800;
+    color: var(--brand-orange);
+    line-height: 32px;
+}
+.text-12-700
+{
+    font-size: 12px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 18px;
+    color: var(--text-white);
+}
+.text-63-900
+{
+    font-size: 63px;
+    font-weight: 900;
+    font-style: normal;
+    line-height: 79px;
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.8);
+}
+.text-18-700-w
+{
+    font-size: 18px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 25px;
+    color: var(--text-white);
+}
+.text-18-700-b
+{
+    font-size: 18px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 25px;
+    color: var(--text-black);
+}
+.text-14-700-w
+{
+    font-size: 14px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 21px;
+    color: var(--text-white);
+}
+
+.text-42-900
+{
+    font-size: 42px;
+    font-weight: 900;
+    font-style: normal;
+    line-height: 42px;
+    color: var(--text-black);
+}
+.text-11-700-w
+{
+    font-size: 11px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 14px;
+    color: var(--text-white);
+}
+.text-11-700-b
+{
+    font-size: 11px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 14px;
+    color: var(--text-black);
+}
+.text-21-700-b
+{
+    font-size: 21px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 28px;
+    color: var(--text-black); 
+}
+.text-12-600
+{
+    font-size: 12px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 18px;
+    color: var(--text-black); 
+}
+.text-26-900-b
+{
+    font-size: 26px;
+    font-weight: 900;
+    font-style: normal;
+    line-height: 32px;
+    color: var(--text-black);
+}
+.text-16-700
+{
+    font-size: 16px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 25px;
+    color: var(--text-black);
+}
+.text-16-700-w
+{
+    font-size: 16px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 24px;
+    color: var(--text-white);
+}
+.text-12-400
+{
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 18px;
+    color: var(--text-muted-gray);
+}
+.text-32-900
+{
+    font-size: 32px;
+    font-weight: 900;
+    font-style: normal;
+    line-height: 35px;
+}
+.text-14-700-b
+{
+    font-size: 14px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 21px;
+    color: var(--text-black);
+}
+.text-18-600-g
+{
+    font-size: 18px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 25px;
+    color: var(--text-muted-gray);
+}
+.text-14-700-gray
+{
+    font-size: 14px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 21px;
+    color: var(--text-muted-gray);
+}
+.text-14-400
+{
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 23px;
+    color: var(--text-black);
+}
+.text-32-900-b
+{
+    font-size: 32px;
+    font-weight: 900;
+    font-style: normal;
+    line-height: 35px;
+    color: var(--text-black);
+}
+.text-18-600-b
+{
+    font-size: 18px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 28px;
+    color: var(--text-black);
+}
+.text-16-600-b
+{
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 28px;
+    color: var(--text-black);
+}
+.text-21-700-w
+{
+    font-size: 21px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 28px;
+    font-family: EXO, sans-serif;
+    color: var(--text-white);
+}
+.text-26-900-w
+{
+    font-size: 26px;
+    font-weight: 900;
+    font-style: normal;
+    line-height: 32px;
+    color: var(--text-white);
+}
+.text-16-400-w
+{
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 26px;
+    color: var(--text-white); 
+}
+.text-21-900-w
+{
+    font-size: 21px;
+    font-weight: 900;
+    font-style: normal;
+    line-height: 28px;
+    color: var(--text-white); 
+}
+.text-24-900-b
+{
+    font-size: 24px;
+    font-weight: 900;
+    font-style: normal;
+    line-height: 32px;
+    color: var(--text-black); 
+}
+.text-16-600-w
+{
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 25px;
+    color: var(--text-white); 
+}
+.text-14-600
+{
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 21px;
+    color: var(--text-white);
+}
+.text-14-600-b
+{
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 20px;
+    color: var(--text-black); 
+}
+
+/* Hero Section */
+div#hero
+{
+    background-color: var(--bg-hero);
+    border: 2px solid var(--black);
+    min-height: 100vh;
+    position: relative;
+}
+div.navbar
+{
+    margin-inline: auto;
+    display: flex;
+    padding: 14px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+}
+div.navbar div.container
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-white);
+    border: 1.6px solid var(--black);
+    line-height: 24px;
+    border-radius: 16px;
+    padding: 12px 24px;
+}
+div.navbar div.container ul li:hover a
+{
+    color: var(--hover-orange);
+}
+div.navbar div.container li i
+{
+    font-size: 12px;
+    color: rgb(209 213 220);
+    margin-left: 16px;
+}
+div.navbar div.container button
+{
+    background-color: rgb(255, 209, 91);
+    border: 1.6px solid var(--black);
+    border-radius: 999px;
+    padding: 8px 16px;
+    transform: translate(0);
+    transition: transform 0.15s ease;
+}
+div.navbar div.container button:hover
+{
+    transform: translate(3px, 3px);
+}
+div.navbar div.container button
+{
+    font-size: 14px;
+    font-family: EXO, sans-serif;
+    font-weight: 700;
+    line-height: 20px;
+    color: var(--text-black);
+}
+div.navbar div.container a.menu-toggle
+{
+    width: 42px;
+    height: 42px;
+    border: 1.6px solid var(--black);
+    border-radius: 4px;
+    box-shadow: 3px 3px var(--black);
+    cursor: pointer;
+    transform: translate(0);
+    transition: transform 0.2s ease;
+}
+div.navbar div.container a.menu-toggle:hover
+{
+    transform: translate(0, -2px);
+}
+div.navbar div.container a.menu-toggle:active
+{
+    transform: translate(0, 2px);
+}
+div.navbar div.container a.menu-toggle i
+{
+    font-size: 21px;
+    font-style: normal;
+    color: var(--text-black);
+}
+.mobile-menu
+{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(2px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+.sidebar
+{
+    width: 320px;
+    height: 100vh;
+    background-color: var(--bg-white);
+    border-left: 4px solid var(--black);
+    padding: 24px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow-y: auto;
+    transform: translate(100%) rotate(2deg);
+    transition: transform 0.3s ease;
+}
+.mobile-menu:target
+{
+    opacity: 1;
+    pointer-events: auto;
+}
+.mobile-menu:target .sidebar
+{
+    transform: translate(0) rotate(0);
+}
+div#hero div#mobile-menu div.sidebar div.menu-x
+{
+    border-block: 1.6px solid var(--black);
+    padding-block: 12px;
+}
+div#hero div#mobile-menu div.sidebar div.menu-x a
+{
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    font-style: normal;
+    color: var(--black);
+    border: 1.6px solid var(--black);
+}
+div#hero div#mobile-menu div.sidebar div.menu-x a:hover
+{
+    background-color: rgb(255 226 226);
+    color: rgb(255 122 80);
+}
+div#hero div#mobile-menu div.sidebar li
+{
+    margin-bottom: 24px;
+    transform: translate(0);
+    transition: transform 0.15s ease;
+}
+div#hero div#mobile-menu div.sidebar li:hover,
+div#hero div#mobile-menu div.sidebar button:hover
+{
+    color: rgb(255, 122, 80);
+    cursor: pointer;
+    transform: translate(0, -4px);
+}
+div#hero div#mobile-menu div.sidebar button
+{
+    width: 100%;
+    padding-block: 12px;
+    background-color: rgb(255, 209, 91);
+    border: 4px solid var(--black);
+    box-shadow: 3px 3px var(--black);
+    color: rgb(255, 122, 80);
+    cursor: pointer;
+    transform: translate(0);
+    transition: transform 0.15s ease;
+}
+div#hero div.main-section
+{
+    padding-block: 144px 64px;
+    display: flex;
+    justify-content: center;
+}
+div#hero div.shapes
+{
+    width: 100%;
+}
+div#hero div.bg-shape-l
+{
+    width: 112px;
+    height: 112px;
+    background-color: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    transform: rotate(12deg);
+    z-index: 0;
+}
+div#hero div.bg-shape-r
+{
+    width: 84px;
+    height: 84px;
+    background-color: rgba(251, 44, 54, 0.1);
+    position: absolute;
+    top: 160px;
+    right: 80px;
+    transform: rotate(45deg);
+}
+div#hero div.bg-shape-b
+{
+    width: 112px;
+    height: 112px;
+    background-color: rgba(43, 127, 255, 0.1);
+    position: absolute;
+    bottom: 80px;
+    left: 33.3333%;
+    transform: rotate(45deg);
+}
+div#hero div.main-section div.container
+{
+    padding-inline: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+}
+div#hero div.main-section div.container div.info
+{
+    z-index: 1;
+}
+div#hero div.main-section div.container div.info div.b-tag
+{
+    background-color: var(--bg-black);
+    padding: 8px 16px;
+    box-shadow: 3px 3px var(--black);
+    border: 1.6px solid var(--black);
+    display: inline-block;
+    /* width: fit-content; */
+    transform: rotate(-2deg);
+    line-height: 24px;
+    margin-bottom: 24px;
+}
+.text-black
+{
+    color: var(--text-black);
+}
+.text-red
+{
+    color: var(--red);
+}
+.text-blue
+{
+    color: var(--blue);
+}
+div#hero div.main-section div.container div.info p
+{
+    background-color: var(--bg-white);
+    border: 1.6px solid var(--black);
+    padding: 16px;
+    box-shadow: 3px 3px var(--black);
+}
+div#hero div.main-section div.container div.info button.b-btn
+{
+    font-family: EXO, sans-serif;
+    padding: 16px 32px;
+    border: 4px solid var(--black);
+    background-color: var(--bg-black);
+    transform: translate(0);
+    transition: transform 0.2s ease;
+}
+div#hero div.main-section div.container div.info button.b-btn:hover
+{
+    transform: translate(6px, 6px);
+    cursor: pointer;
+}
+div#hero div.main-section div.container div.info button.w-btn
+{
+    font-family: EXO, sans-serif;
+    padding: 16px 32px;
+    border: 4px solid var(--black);
+    background-color: var(--bg-white);
+    transform: translate(0);
+    transition: transform 0.2s ease;
+}
+div#hero div.main-section div.container div.info button.w-btn:hover
+{
+    transform: translate(6px, 6px);
+    cursor: pointer;
+}
+.before
+{
+    position: relative;
+}
+.before::before
+{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--black);
+    transform: translate(6px, 6px);
+    position: absolute;
+    z-index: -10;
+}
+div#hero div.main-section div.container div.info button span
+{
+    font-size: 20px;
+    margin-right: 8px;
+}
+div#hero div.main-section div.container div.relative
+{
+    z-index: 1;
+}
+div#hero div.main-section div.container div.featured-img
+{
+    height: 328px;
+    border: 4px solid var(--black);
+    transform: translate(0) ;
+    transition: all 0.15s ease;
+    box-shadow: 6px 6px var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div#hero div.main-section div.container div.featured-img:hover
+{
+    transform: translate(-2px, -2px);
+}
+
+div#hero div.main-section div.container div.featured-img img
+{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+div#hero div.main-section div.container div.red-tag
+{
+    background-color: var(--red-light);
+    padding: 8px 16px;
+    box-shadow: 3px 3px var(--black);
+    transform: rotate(12deg);
+    display: inline-block;
+    border: 1.6px solid var(--black);
+    position: absolute;
+    top: -16px;
+    right: -16px;
+}
+
+/* LatestArticles section */
+div#latestArticles
+{
+    width: 100%;
+    background-color: rgb(245, 245, 245);
+    border: 2px solid var(--black);
+    padding-block: 80px;
+}
+div#latestArticles div.container
+{
+    padding-inline: 24px;
+    margin-inline: auto;
+}
+div#latestArticles div.container div.cols
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+}
+div#latestArticles div.container div.l-col div.black-tag
+{
+    background-color: var(--black);
+    padding: 8px 16px;
+    box-shadow: 3px 3px var(--black);
+    border: 1.6px solid var(--black);
+    transform: rotate(2deg);
+    line-height: 24px;
+}
+div#latestArticles div.container div.section-header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 48px;
+}
+div#latestArticles div.container div.article
+{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-white);
+    padding: 32px;
+    border: 4px solid var(--black);
+    box-shadow: 4px 4px var(--black);  
+    transform: translate(0); 
+    transition: all 0.3s ease;
+}
+div#latestArticles div.container div.article:hover
+{
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px var(--black);  
+}
+.article:hover h4.color-red-2
+{
+    color: var(--red);
+}
+.color-blue-1
+{
+    color: var(--blue-light);
+}
+.article:hover h4.color-blue-2 
+{
+    color: var(--blue);
+}
+.color-violet-1
+{
+    color: var(--purple);
+}
+.article:hover h4.color-violet-2 
+{
+    color: var(--hover-purple);
+}
+div#latestArticles div.container div.article div.img-cont
+{
+    width: 160px;
+    height: 128px;
+    border: 1.6px solid var(--black);
+    position: relative;
+}
+div#latestArticles div.container div.article img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+div#latestArticles div.container div.article div.tag-new
+{
+    background-color: var(--red-light);
+    border: 1.6px solid var(--black);
+    padding: 4px 8px;
+    display: inline-block;
+    transform: rotate(12deg);
+    position: absolute;
+    top: -8px;
+    right: -8px;
+}
+div#latestArticles div.container div.article div.y-tag
+{
+    background-color: var(--yellow);
+    border: 1.6px solid var(--black);
+    padding: 4px 12px;
+    display: inline-block;
+    transform: rotate(-1deg);
+    box-shadow: 3px 3px var(--black);
+}
+div#latestArticles div.container div.article div.tag-hot
+{
+    background-color: var(--blue-light);
+    border: 1.6px solid var(--black);
+    padding: 4px 8px;
+    display: inline-block;
+    transform: rotate(-12deg);
+    position: absolute;
+    top: -8px;
+    right: -8px;
+}
+div#latestArticles div.container div.article div.grn-tag
+{
+    background-color: rgb(123, 241, 168);
+    border: 1.6px solid var(--black);
+    padding: 4px 12px;
+    display: inline-block;
+    transform: rotate(1deg);
+    box-shadow: 3px 3px var(--black);
+}
+div#latestArticles div.container div.article div.tag-viral
+{
+    background-color: var(--purple);
+    border: 1.6px solid var(--black);
+    padding: 4px 8px;
+    display: inline-block;
+    transform: rotate(45deg);
+    position: absolute;
+    top: -8px;
+    right: -8px;
+}
+div#latestArticles div.container div.article div.pink-tag
+{
+    background-color: rgb(253, 165, 213);
+    border: 1.6px solid var(--black);
+    padding: 4px 12px;
+    display: inline-block;
+    transform: rotate(-2deg);
+    box-shadow: 3px 3px var(--black);
+}
+
+div#latestArticles div.container div.l-col button
+{
+    background-color: var(--black);
+    padding: 16px 48px;
+    border: 0;
+    font-family: EXO, sans-serif;
+    transform: translate(0);
+    transition: transform 0.2s ease;
+}
+div#latestArticles div.container div.l-col button:hover
+{
+    cursor: pointer;
+    transform: translate(6px, 6px);
+
+}
+div#latestArticles div.container div.l-col button i
+{
+    width: fit-content;
+    margin-right: 8px;
+}
+div#latestArticles div.container div.article div.article-info i
+{
+    width: fit-content;
+    margin-right: 8px;
+}
+div#latestArticles div.container div.article div.article-info i.fa-heart
+{
+    margin-right: 4px;
+}
+
+div#latestArticles div.container div.article-info span:last-child
+{
+    width: fit-content;
+    color: var(--red);
+    margin-right: 0;
+}
+div#latestArticles div.container div.r-col
+{
+    position: sticky;
+    top: 32px;
+}
+div#latestArticles div.container div.r-col div.trending-card
+{
+    width: 100%;
+    background-color: var(--bg-white);
+    border: 4px solid var(--black);
+    box-shadow: 6px 6px var(--black);
+    padding: 32px;
+}
+.color-red-1
+{
+    color: var(--red-light);
+}
+.group-hover:hover h5.color-red-2
+{
+    color: var(--red);
+}
+.color-blue-1
+{
+    color: var(--blue-light);
+}
+.group-hover:hover h5.color-blue-2 
+{
+    color: var(--blue);
+}
+.color-violet-1
+{
+    color: var(--purple);
+}
+.group-hover:hover h5.color-violet-2 
+{
+    color: var(--hover-purple);
+}
+.group-hover:hover
+{
+    cursor: pointer;
+}
+div#latestArticles div.container div.r-col div.categories-card
+{
+    width: 100%;
+    background-color: var(--bg-white);
+    border: 4px solid var(--black);
+    box-shadow: 6px 6px var(--black);
+    padding: 32px;
+}
+div#latestArticles div.r-col div.categories-card div.tech
+{
+    background-color: rgb(254 249 194);
+    border: 1.6px solid var(--black);
+    padding: 12px 16px;
+    transform: translate(0);
+    transition: all 0.15s ease;
+}
+div#latestArticles div.r-col div.categories-card div.tech:hover
+{
+    background-color: rgb(255, 223, 32);
+    box-shadow: 6px 6px var(--black);
+    border: 2px solid var(--black);
+    transform: translate(-2px, -2px);
+    cursor: pointer;
+}
+div#latestArticles div.r-col div.categories-card div.design
+{
+    background-color: rgb(220 252 231);
+    border: 1.6px solid var(--black);
+    padding: 12px 16px;
+    transform: translate(0);
+    transition: all 0.15s ease;
+}
+div#latestArticles div.r-col div.categories-card div.design:hover
+{
+    background-color: rgb(123, 241, 168);
+    box-shadow: 6px 6px var(--black);
+    border: 2px solid var(--black);
+    transform: translate(-2px, -2px);
+    cursor: pointer;
+}
+div#latestArticles div.r-col div.categories-card div.culture
+{
+    background-color: rgb(252 231 243);
+    border: 1.6px solid var(--black);
+    padding: 12px 16px;
+    transform: translate(0);
+    transition: all 0.15s ease;
+}
+div#latestArticles div.r-col div.categories-card div.culture:hover
+{
+    background-color: rgb(253, 165, 213);
+    box-shadow: 6px 6px var(--black);
+    border: 2px solid var(--black);
+    transform: translate(-2px, -2px);
+    cursor: pointer;
+}
+div#latestArticles div.r-col div.categories-card div.opinion
+{
+    background-color: rgb(219 234 254);
+    border: 1.6px solid var(--black);
+    padding: 12px 16px;
+    transform: translate(0);
+    transition: all 0.15s ease;
+}
+div#latestArticles div.r-col div.categories-card div.opinion:hover
+{
+    background-color: rgb(142, 197, 255);
+    box-shadow: 6px 6px var(--black);
+    border: 2px solid var(--black);
+    transform: translate(-2px, -2px);
+    cursor: pointer;
+}
+div#latestArticles div.r-col div.categories-card div.tutorials
+{
+    background-color: rgb(243 232 255);
+    border: 1.6px solid var(--black);
+    padding: 12px 16px;
+    transform: translate(0);
+    transition: all 0.15s ease;
+}
+div#latestArticles div.r-col div.categories-card div.tutorials:hover
+{
+    background-color: rgb(218, 178, 255);
+    box-shadow: 6px 6px var(--black);
+    border: 2px solid var(--black);
+    transform: translate(-2px, -2px);
+    cursor: pointer;
+}
+
+/* authors section*/
+div#authors
+{
+    width: 100%;
+    background-color: var(--bg-authers);
+    border: 2px solid var(--black);
+    padding-block: 80px;
+    position: relative;
+}
+div#authors div.container
+{
+    padding-inline: 24px;
+    margin-inline: auto;
+}
+div#authors div.square-shape-t
+{
+    width: 140px;
+    height: 140px;
+    background-color: rgb(0, 0, 0, 0.1);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 40px;
+    right: 40px;
+}
+div#authors div.square-shape-b
+{
+    width: 112px;
+    height: 112px;
+    background-color: rgb(251, 44, 54, 0.1);
+    transform: rotate(45deg);
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+}
+div#authors div.container div.underline::after
+{
+    content: "";
+    width: 112px;
+    height: 7px;
+    margin-top: 16px;
+    background-color: var(--bg-black);
+    display: block;
+    margin-inline: auto;
+    transform: rotate(1deg) ;
+}
+div#authors div.container div.cards
+{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+div#authors div.container div.card
+{
+    border: 4px solid var(--black);
+    padding: 32px;
+    box-shadow: 6px 6px var(--black);
+    transform: translate(0);
+    transition: all 0.3s ease;
+}
+.bg-beige
+{
+    background-color: rgb(254, 249, 194);
+}
+.bg-lightpink
+{
+    background-color: rgb(252, 231, 243);
+}
+.bg-lightgreen
+{
+    background-color: rgb(220, 252, 231);
+}
+div#authors div.container div.card:hover
+{
+    transform: translate(-2px, -2px);
+}
+div#authors div.container div.card img
+{
+    width: 128px;
+    border: 4px solid var(--black);
+    display: block;
+    margin-inline: auto;
+}
+div#authors div.container div.card div.founder-tag
+{
+    background-color: var(--red-light);
+    padding: 4px 8px;
+    border: 1.6px solid var(--black);
+    transform: rotate(12deg);
+    position: absolute;
+    top: -8px;
+    right: -8px;
+}
+div#authors div.container div.card ul
+{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+div#authors div.container div.card ul i
+{
+    width: fit-content;
+    font-size: 15.5px;
+}
+div#authors div.container div.card ul li
+{
+    width: 42px;
+    height: 42px;
+    background-color: var(--bg-black);
+    border: 2px solid var(--black);  
+    transform: translate(0);  
+    transition: all 0.15s ease;
+}
+div#authors div.container div.card ul a
+{
+    color: var(--text-white);
+    text-decoration: none;
+}
+div#authors div.container div.card ul li:hover
+{
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px var(--black);
+    cursor: pointer;
+}
+div#authors div.container div.card ul li.color-lightblue:hover
+{
+    background-color: rgb(29, 161, 242);
+}
+div#authors div.container div.card ul li.color-blue:hover
+{
+    background-color: var(--blue);
+}
+div#authors div.container div.card ul li.color-pink:hover
+{
+    background-color: rgb(230, 0, 118);
+}
+div#authors div.container div.card:hover h4.color-red
+{
+    color: var(--red);
+}
+div#authors div.container div.card:hover h4.color-blue
+{
+    color: var(--blue);
+}
+div#authors div.container div.card:hover h4.color-purple
+{
+    color: var(--hover-purple);
+}
+
+div#authors div.container div.card div.lead-tag
+{
+    background-color: var(--blue-light);
+    padding: 4px 8px;
+    border: 1.6px solid var(--black);
+    transform: rotate(-12deg);
+    position: absolute;
+    top: -8px;
+    right: -8px;
+}
+div#authors div.container div.card div.purple-tag
+{
+    background-color: var(--purple);
+    border: 1.6px solid var(--black);
+    padding: 4px 8px;
+    display: inline-block;
+    transform: rotate(45deg);
+    position: absolute;
+    top: -8px;
+    right: -8px;
+}
+/*Community section*/
+div#community
+{
+    width: 100%;
+    background-color: var(--bg-section);
+    border: 2px solid var(--black);
+    padding-block: 80px;
+}
+div#community div.container
+{
+    padding-inline: 24px;
+    margin-inline: auto;
+}
+div#community div.container div.underline::after
+{
+    content: "";
+    width: 112px;
+    height: 7px;
+    margin-top: 16px;
+    background-color: var(--bg-black);
+    display: block;
+    margin-inline: auto;
+    transform: rotate(-1deg) ;
+}
+div#community div.container div.cols
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+div#community div.container div.cols div.l-col p
+{
+    background-color: var(--bg-white);
+    border: 1.6px solid var(--black);
+    padding: 16px;
+    box-shadow: 3px 3px var(--black);
+}
+div#community div.container div.cols div.l-col i
+{
+    font-size: 17.5px;
+    color: var(--text-white);
+}
+div#community div.container div.cols div.l-col button
+{
+    background-color: var(--bg-black);
+    padding: 24px 48px;
+    border: 0;
+    transform: translate(0);
+    transition: transform 0.2s ease;
+}
+div#community div.container div.cols div.l-col button:hover
+{
+    transform: translate(6px, 6px);
+    cursor: pointer;
+}
+div#community div.container div.cols div.l-col button i
+{
+    font-size: 24px;
+    width: fit-content;
+    margin-right: 12px;
+}
+.feature-box
+{
+    width: 42px;
+    height: 42px;
+    border: 1.6px solid var(--black);
+    flex-shrink: 0;
+}
+.bg-red
+{
+   background-color: var(--red-light);
+}
+.bg-blue
+{
+    background-color: var(--blue-light);
+}
+.bg-purple
+{
+    background-color: var(--purple);
+}
+.bg-green
+{
+    background-color: var(--green);
+}
+div#community div.container div.cols div.r-col
+{
+    background-color: var(--bg-white);
+    border: 4px solid var(--black);
+    padding: 35px;
+    box-shadow: 6px 6px var(--black);
+}
+div#community div.container div.cols div.r-col img
+{
+    width: 42px;
+    margin-right: 16px;
+    border: 1.6px solid var(--black);
+}
+div#community div.container div.cols div.r-col div.testimonial
+{
+    padding: 16px 16px 16px 24px;
+    border: 1.6px solid var(--black);
+}
+.bg-pastelpink
+{
+    background-color: rgb(254, 242, 242);
+}
+.bg-patelblue
+{
+    background-color: rgb(239, 246, 255);
+}
+.bg-pastelpurple
+{
+    background-color: rgb(250, 245, 255);
+}
+
+/* Footer Section */
+div#footer
+{
+    width: 100%;
+    background-color: var(--bg-black);
+    padding-block: 80px;
+}
+div#footer div.container
+{
+    padding-inline: 24px;
+    margin-inline: auto;
+}
+div#footer div.container div.footer-content
+{
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+div#footer div.container div.footer-content div.logo
+{
+    background-color: var(--bg-white);
+    width: 56px;
+    height: 56px;
+    border: 1.6px solid var(--black);
+}
+div#footer div.container div.footer-content div.logo i
+{
+    font-size: 24px;
+}
+div#footer div.container div.footer-content div.m-col ul
+{
+    list-style-type: none;
+}
+div#footer div.container div.footer-content div.m-col li
+{
+    margin-bottom: 16px;
+}
+div#footer div.container div.footer-content div.m-col li:last-child
+{
+    margin: 0;
+}
+div#footer div.container div.footer-content div.r-col input
+{
+    background-color: var(--bg-black);
+    border: 0.8px solid rgb(255, 255, 255);
+    outline: none;
+    padding: 16px;
+    font-family: EXO, sans-serif;
+    display: block;
+    width: 100%;
+}
+div#footer div.container div.footer-content div.r-col input:focus
+{
+    border-color: var(--yellow);
+}
+div#footer div.container div.footer-content div.r-col input::placeholder
+{
+    font-size: 18px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 28px;
+    color: rgb(161, 161, 161); 
+}
+
+div#footer div.container div.footer-content div.r-col button
+{
+    background-color: var(--yellow);
+    width: 100%;
+    padding-block: 16px;
+    border: 4px solid var(--black);
+    font-family: EXO, sans-serif;
+    box-shadow: -4px -4px 0 rgba(0, 0, 0, 0.2) inset;
+    transform: translate(0);
+    transition: all 0.2s ease;
+}
+div#footer div.container div.footer-content div.r-col button:hover
+{
+    transform: translate(4px, 4px);
+    background-color: var(--hover-yellow);
+    cursor: pointer;
+}
+div#footer div.container div.footer-bottom
+{
+    border-top: 4px solid var(--text-white);
+}
+div#footer div.container div.footer-bottom a:last-child
+{
+    margin: 0;
+}
+div#footer div.container div.footer-content div.m-col li:hover a,
+div#footer div.container div.footer-bottom a:hover
+{
+    color: var(--yellow);
+}
+
+/* Mobile First */
+.xsm-100
+{
+    width: 100%;
+}
+.xsm-50
+{
+    width: 50%;
+}
+.xsm-33
+{
+    width: 33.33333%;
+}
+.xsm-25
+{
+    width: 25%;
+}
+.xsm-20
+{
+    width: 20%;
+}
